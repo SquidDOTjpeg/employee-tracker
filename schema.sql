@@ -4,22 +4,22 @@ CREATE DATABASE companyDB;
 
 USE companyDB;
 
-CREATE TABLE department (
-   id INT,
+CREATE TABLE departments (
+   id INT NOT NULL AUTO_INCREMENT,
    name VARCHAR(30) NOT NULL,
    PRIMARY KEY(id)
 );
 
-CREATE TABLE role (
+CREATE TABLE roles (
    id INT NOT NULL AUTO_INCREMENT,
    title  VARCHAR(30) NOT NULL,
-   salary  DECIMAL,
+   salary  DECIMAL(9,2),
    department_id  INT NOT NULL,
    PRIMARY KEY(id)
 );
 
-CREATE TABLE employee (
-   id INT 
+CREATE TABLE employees (
+   id INT NOT NULL AUTO_INCREMENT,
    first_name VARCHAR(30) NOT NULL,
    last_name VARCHAR(30) NOT NULL,
    role_id INT NOT NULL,
